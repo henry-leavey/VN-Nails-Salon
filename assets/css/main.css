@@ -338,15 +338,20 @@ input, select, textarea {
 
 	#image-wrapper {
 		width: 100%; /* Makes the div full width */
+        height: auto;
 		overflow: hidden; /* Ensures no overflow happens */
 		text-align: center;
 		margin-top: 20px; /* Space between nav and image */
+        transition: transform 1s ease-in-out;
 	}
-	
-	#image-wrapper img {
-		width: 100%; /* Makes the image stretch across the full width of the screen */
-		height: auto; /* Keeps the aspect ratio intact */
-	}
+    
+    #image-wrapper img {
+        width: 100%;
+        height: auto;
+        left: 100%; /* Start off-screen */
+        transition: transform 1s ease-in-out;
+    }
+    
 
 	/* Main Wrapper */
 	#main-wrapper {
@@ -390,7 +395,7 @@ input, select, textarea {
 	}
 
     #gallery-wrapper {
-		background-color: var(--light-bg-color);
+		background-color: white;
 		color: black;
 		text-align: center;
 		padding-top: 20px;
