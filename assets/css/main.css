@@ -350,7 +350,7 @@ input, select, textarea {
 
 	/* Main Wrapper */
 	#main-wrapper {
-		background-color: var(--light-color);
+		background-color: var(--primary-color);
 		padding: 40px 20px;
 		max-width: 1000px;
 		margin: 0 auto;
@@ -363,7 +363,7 @@ input, select, textarea {
 		font-size: 2.5rem;
 		text-align: center;
 		margin-bottom: 20px;
-		color: var(--darkest-color); /* Green for a spa/nature vibe */
+		color: var(--light-bg-color);
 		font-weight: bold;
 	}
 
@@ -371,14 +371,14 @@ input, select, textarea {
 	#main-wrapper p {
 		font-size: 1.2rem;
 		line-height: 1.8;
-		color: #fff;
+		color: var(--light-bg-color);
 		margin-bottom: 20px;
 		text-align: justify;
 	}
 
 	/* Emphasis on Strong Text */
 	#main-wrapper strong {
-		color: #fff;
+		color: var(--light-bg-color);
 		font-weight: bold;
 	}
 
@@ -388,6 +388,60 @@ input, select, textarea {
 		font-style: italic;
 		text-align: center;
 	}
+
+    #gallery-wrapper {
+		background-color: var(--light-bg-color);
+		color: black;
+		text-align: center;
+		padding-top: 20px;
+    }
+
+    /* Heading Styles */
+	#gallery-wrapper h2 {
+		font-size: 2.5rem;
+		font-weight: bold;
+		color: black;
+	}
+
+	/* Paragraph Styles */
+	#gallery-wrapper p {
+		font-size: 1.2rem;
+		line-height: 1.8;
+	}
+
+    /* Gallery Grid */
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* Max 4 columns per row */
+        gap: 20px;
+        max-width: fit-content; /* Gallery width will fit its content */
+        margin: 0 auto; /* Centers the gallery horizontally */
+        padding: 20px;
+        justify-items: center; /* Centers items horizontally within each grid cell */
+        position: relative;
+        z-index: 1;
+        background-color: var(--lightest-color);
+        border-radius: 10px;
+    }
+
+    /* Uniform Image Size */
+    .gallery img {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        cursor: pointer;
+        border-radius: 10px;
+        transition: transform 0.3s ease-in-out;
+        z-index: 2;
+    }
+
+    .gallery img:hover {
+        transform: scale(1.05);
+    }
+
+    .gallery-bottom {
+		background-color: var(--primary-color) !important;
+    }
 
 /* Header */
 
@@ -661,11 +715,13 @@ body, input, select, textarea {
 }
 
 .pricing-card h2 {
+    color: inherit;
     font-size: 28px;
     font-weight: 700;
 }
 
 .pricing-card h3 {
+    color: inherit;
     font-size: 20px;
     margin-top: 15px;
     font-weight: 700;
@@ -674,6 +730,7 @@ body, input, select, textarea {
 }
 
 .pricing-card p {
+    color: inherit;
     font-size: 16px;
     display: flex;
     justify-content: space-between;
@@ -805,32 +862,6 @@ body, input, select, textarea {
 
 .footer-column a:hover {
     color: #f9a826;
-}
-
-/* Gallery Grid */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-    padding: 20px;
-    justify-content: center;
-    position: relative;
-    z-index: 1;
-}
-
-/* Uniform Image Size */
-.gallery img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    cursor: pointer;
-    border-radius: 10px;
-    transition: transform 0.3s ease-in-out;
-    z-index: 2;
-}
-
-.gallery img:hover {
-    transform: scale(1.05);
 }
 
 /* Modal Styles */
@@ -1004,6 +1035,11 @@ body, input, select, textarea {
 
     #nav {
         font-size: 1rem;
+    }
+    
+    .gallery img {
+        width: 200px;
+        height: 200px;
     }
 }
 
@@ -1362,6 +1398,10 @@ body, input, select, textarea {
 
     #copyright {
         text-align: left;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); /* Max 4 columns per row */
     }
 }
 

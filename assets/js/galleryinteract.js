@@ -4,9 +4,10 @@ let images = [];
 // Fetch images dynamically from JSON or GitHub API
 async function loadGallery() {
     try {
-        const gallery = document.getElementById("gallery");
+        const gallery1 = document.getElementById("gallery1");
+        const gallery2 = document.getElementById("gallery2");
 
-        const response = await fetch("images.json");
+        const response = await fetch("nailimages.json");
         images = await response.json();
 
         images.forEach((fileName, index) => {
@@ -23,7 +24,11 @@ async function loadGallery() {
 
             imgContainer.appendChild(img);
             //imgContainer.appendChild(label);
-            gallery.appendChild(imgContainer);
+            if (index < images.length/2) {
+                gallery1.appendChild(imgContainer);
+            } else {
+                gallery2.appendChild(imgContainer);
+            }
         });
 
     } catch (error) {
