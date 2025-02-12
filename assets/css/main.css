@@ -508,7 +508,12 @@ body, input, select, textarea {
     padding: 0 5vw;
 }
 
-#nav .left, #nav .right {
+#nav .left {
+    display: flex;
+    gap: 5vw; 
+} 
+
+#nav .right {
     display: flex;
     gap: 10vw; 
 }
@@ -1401,19 +1406,22 @@ body, input, select, textarea {
     cursor: pointer;
 }
 
-/* Initially hide the button on larger screens */
 #menu-toggle {
-    display: none; /* Hide by default */
+    display: none; /* Hidden by default */
     position: fixed;
     top: 20px;
     left: 20px;
-    font-size: 24px;
-    background: var(--darkest-color);
+    width: 50px; /* Set a fixed width */
+    height: 50px; /* Set a fixed height */
+    font-size: 12px;
+    background: rgba(0, 0, 0, 0.5);
     border: none;
     border-radius: 10px;
     color: white;
     cursor: pointer;
     z-index: 1000; /* Ensure it appears above other content */
+    text-align: center; /* Centers the icon */
+    padding: 0; /* Remove any extra padding */
 }
 
 /* Show the button only on smaller screens (max-width: 768px) */

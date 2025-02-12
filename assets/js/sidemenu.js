@@ -1,19 +1,26 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const menuToggle = document.getElementById("menu-toggle");
-    const sideMenu = document.getElementById("side-menu");
-    const closeMenu = document.getElementById("close-menu");
+document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("click", function (event) {
+        const menuToggle = document.getElementById("menu-toggle");
+        const sideMenu = document.getElementById("side-menu");
+        const closeMenu = document.getElementById("close-menu");
 
-    menuToggle.addEventListener("click", function() {
-        sideMenu.style.left = "0";
-    });
+        if (!menuToggle || !sideMenu || !closeMenu) {
+            console.error("Menu toggle, side menu, or close button not found.");
+            return;
+        }
 
-    closeMenu.addEventListener("click", function() {
-        sideMenu.style.left = "-250px";
-    });
+        // Open the menu when clicking the toggle button
+        if (event.target.id === "menu-toggle") {
+            sideMenu.style.left = "0";
+        }
 
-    // Close the menu when clicking outside of it
-    document.addEventListener("click", function(event) {
-        if (!sideMenu.contains(event.target) && !menuToggle.contains(event.target)) {
+        // Close the menu when clicking the close button
+        if (event.target.id === "close-menu") {
+            sideMenu.style.left = "-250px";
+        }
+
+        // Close the menu if clicking outside of it
+        if (!sideMenu.contains(event.target) && event.target !== menuToggle) {
             sideMenu.style.left = "-250px";
         }
     });
