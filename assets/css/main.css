@@ -323,11 +323,69 @@ input, select, textarea {
 		background-color: var(--light-bg-color);
 		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow effect */
 		z-index: 1000;
-	}
+	}    
 
-	#features-wrapper {
-		padding: 3em 0 3em 0;
-	}
+    /* features */
+    #features-wrapper {
+        background-color: white;
+        padding: 40px 20px;
+        height: auto;
+        width: 100%;
+        margin: 0 auto;
+        justify-content: center; /* Space out the text + button and image */
+        display: flex;
+        flex-direction: row; /* Place the text and button on the left, image on the right */
+        align-items: center; /* Vertically align items in the center */
+    }
+
+    /* Text container to hold the paragraph and button */
+    .text-container {
+        width: 40%; /* Ensures the text and button are on the left side */
+        padding: 50px; /* Optional: Space between text and button */
+    }
+
+    /* Paragraph Styles */
+    #features-wrapper p {
+        font-size: 1.2rem;
+        line-height: 1.5;
+        color: black;
+        text-align: justify;
+        margin: 0; /* Remove any margin for consistent spacing */
+    }
+
+    /* Button Styling */
+    #book-button {
+        margin-top: 20px; /* Space between the paragraph and the button */
+        padding: 12px 25px;
+        background-color: var(--primary-color); /* Button background color */
+        color: white;
+        border: none;
+        font-size: 16px;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        text-align: center;
+    }
+
+    /* Button Hover Effect */
+    #book-button:hover {
+        background-color: var(--darkest-color); /* Darker background on hover */
+    }
+
+    /* Image Styling */
+    #features-wrapper img { 
+        width: 300px;
+        height: 300px;
+        border-radius: 30px;
+        margin-left: 20px; /* Space between the image and the text */
+    }
+
+    /* Emphasis on Strong Text */
+    #features-wrapper strong {
+        color: black;
+        font-weight: bold;
+    }
+
 
 	#footer-wrapper {
 		padding: 4em 0 2em 0;
@@ -337,21 +395,19 @@ input, select, textarea {
 	}
 
 	#image-wrapper {
-		width: 100%; /* Makes the div full width */
-        height: auto;
-		overflow: hidden; /* Ensures no overflow happens */
-		text-align: center;
-		margin-top: 20px; /* Space between nav and image */
-        transition: transform 1s ease-in-out;
-	}
-    
-    #image-wrapper img {
         width: 100%;
-        height: auto;
-        left: 100%; /* Start off-screen */
-        transition: transform 1s ease-in-out;
+        overflow: hidden;
+        text-align: center;
+        margin-top: 20px;
     }
     
+    #banner-image {
+        width: 100%;
+        height: auto;
+        display: block;
+        transform: translateX(0);
+        transition: transform 1s ease-in-out;
+    }    
 
 	/* Main Wrapper */
 	#main-wrapper {
@@ -398,7 +454,8 @@ input, select, textarea {
 		background-color: white;
 		color: black;
 		text-align: center;
-		padding-top: 20px;
+		padding-top: 30px;
+		padding-bottom: 50px;
     }
 
     /* Heading Styles */
