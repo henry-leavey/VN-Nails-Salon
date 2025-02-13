@@ -4,15 +4,17 @@ let images = [];
 // Fetch images dynamically from JSON or GitHub API
 async function loadGallery() {
     try {
-        const gallery1 = document.getElementById("gallery1");
-        const gallery2 = document.getElementById("gallery2");
+        const gallery1 = document.getElementById("acrylics");
+        const gallery2 = document.getElementById("biab");
+        const gallery3 = document.getElementById("shellac");
 
-        const response = await fetch("nailimages.json");
+        path = "images/nailgallery/Acrylics/";
+        response = await fetch(path+"acrylics.json");
         images = await response.json();
 
         images.forEach((fileName, index) => {
             const img = document.createElement("img");
-            img.src = `images/nailgallery/${fileName}`;
+            img.src = path+fileName;
             img.alt = fileName.replace(".jpg", "");
             img.onclick = () => openModal(index);
 
@@ -23,12 +25,47 @@ async function loadGallery() {
             //label.textContent = fileName.replace(".jpg", "");
 
             imgContainer.appendChild(img);
-            //imgContainer.appendChild(label);
-            if (index < images.length/2) {
-                gallery1.appendChild(imgContainer);
-            } else {
-                gallery2.appendChild(imgContainer);
-            }
+            gallery1.appendChild(imgContainer);
+        });
+
+        path = "images/nailgallery/BIAB/";
+        response = await fetch(path+"biab.json");
+        images = await response.json();
+
+        images.forEach((fileName, index) => {
+            const img = document.createElement("img");
+            img.src = path+fileName;
+            img.alt = fileName.replace(".jpg", "");
+            img.onclick = () => openModal(index);
+
+            const imgContainer = document.createElement("div");
+            imgContainer.classList.add("image-container");
+
+            //const label = document.createElement("p");
+            //label.textContent = fileName.replace(".jpg", "");
+
+            imgContainer.appendChild(img);
+            gallery2.appendChild(imgContainer);
+        });
+
+        path = "images/nailgallery/Shellac/";
+        response = await fetch(path+"shellac.json");
+        images = await response.json();
+
+        images.forEach((fileName, index) => {
+            const img = document.createElement("img");
+            img.src = path+fileName;
+            img.alt = fileName.replace(".jpg", "");
+            img.onclick = () => openModal(index);
+
+            const imgContainer = document.createElement("div");
+            imgContainer.classList.add("image-container");
+
+            //const label = document.createElement("p");
+            //label.textContent = fileName.replace(".jpg", "");
+
+            imgContainer.appendChild(img);
+            gallery3.appendChild(imgContainer);
         });
 
     } catch (error) {
