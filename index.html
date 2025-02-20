@@ -8,16 +8,30 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
 <body class="is-preload homepage">
     <div id="page-wrapper">
 
         <!-- Header (Dynamically Loaded) -->
         <div id="header"></div>
-
+        <!-- 
         <div id="image-wrapper">
             <img id="banner-image" src="images/nailsbanner2.png" alt="Nails Offer">
+        </div> 
+        -->
+
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="images/nailsbanner2.png" alt="Slide 1"></div>
+              <div class="swiper-slide"><img src="images/nailsbanner3.png" alt="Slide 2"></div>
+            </div>
+          
+            <!-- Pagination (optional) -->
+            <div class="swiper-pagination"></div>
         </div>
+          
 
         <div id="features-wrapper">
             <div class="text-container">
@@ -47,7 +61,22 @@
     <!-- Scripts -->
     <script src="assets/js/henry.js"></script>
     <script src="assets/js/sidemenu.js"></script>
-    <script src="assets/js/banner.js"></script>
+    <!-- <script src="assets/js/banner.js"></script> -->
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          loop: true, // Infinite loop
+          autoplay: {
+            delay: 3000, // Auto-slide every 3 seconds
+            disableOnInteraction: false, // Keeps autoplay active after user swipes
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+        });
+      </script>
 
 </body>
 </html>
