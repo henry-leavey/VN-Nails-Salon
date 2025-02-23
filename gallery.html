@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>VN Nail & Spa Salon</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<div id="page-wrapper">
+
+			<!-- Header (Dynamically Loaded) -->
+			<div id="header"></div>
+
+			<div id="gallery-wrapper">
+				<h2>Acrylic</h2>
+				<p>Elegant and chic! Try this gorgeous acrylic nail styles at your next appointment. 
+				</br>Acrylic nails are perfect if you're looking for added length, durability, and a wider range of designs. 
+				</br>Get the ultimate glam look that lasts!</p>
+				<div class="gallery" id="acrylics"></div>
+			</div>
+
+			<div id="gallery-wrapper">
+				<h2>BIAB</h2>
+				<p>Natural yet flawless! Try BIAB nails at your next appointment for a strong, long-lasting manicure that helps strengthen your natural nails.  
+				</br>Perfect for those who love a low-maintenance, chip-resistant finish with a sleek and healthy look!</p>
+				<div class="gallery" id="biab"></div>
+			</div>
+
+			<div id="gallery-wrapper">
+				<h2>Shellac</h2>
+				<p>Glossy and long-lasting! Try Shellac nails at your next appointment for a sleek, chip-resistant finish that keeps your nails looking flawless for weeks.   
+				</br>Perfect for those who love a natural feel with a beautiful, high-shine look!</p>
+				<div class="gallery" id="shellac"></div>
+			</div>
+
+			<div id="gallery-wrapper" class="gallery-bottom">
+				<div id="gallery" class="gallery gallery-bottom" >
+					<img src="images/store1.jpg" alt="">
+					<img src="images/store2.jpg" alt="">
+					<img src="images/store3.jpg" alt="">
+					<a href="https://www.instagram.com/reel/DGD-WeTtXAb/" target="_blank">
+						<img src="images/instaVideo1.png" alt="Company Logo">
+					</a>
+				</div>
+			</div>
+			
+			<!-- Modal Structure -->
+			<div id="imageModal" class="modal">
+				<span class="close" onclick="closeModal()">&times;</span>
+				<img class="modal-content" id="modalImage">
+				<div id="modalCaption" class="caption"></div>
+				
+				<!-- Navigation Arrows -->
+				<button class="prev" onclick="changeImage(-1)">&#10094;</button>
+				<button class="next" onclick="changeImage(1)">&#10095;</button>
+			</div>
+
+			<!-- Footer (Dynamically Loaded) -->
+			<div id="footer"></div>
+
+		</div>
+
+		<!-- Scripts -->
+    	<script src="assets/js/henry.js"></script>
+    	<script src="assets/js/galleryinteract.js"></script>
+    	<script src="assets/js/sidemenu.js"></script>
+
+	</body>
+</html>
