@@ -354,7 +354,6 @@ input, select, textarea {
         line-height: 1.5;
         color: var(--primary-color-dark);
         text-align: center;
-        margin: 0; /* Remove any margin for consistent spacing */
     }
 
     /* Image Styling */
@@ -437,9 +436,9 @@ input, select, textarea {
 
 	/* Main Wrapper */
 	#main-wrapper {
-		background-color: var(--primary-color);
+		background-color: var(--primary-color-dark);
 		padding: 40px 20px;
-		max-width: 1000px;
+		width: 100%;
 		margin: 0 auto;
 		border-radius: 10px;
 		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -460,20 +459,15 @@ input, select, textarea {
 		line-height: 1.8;
 		color: var(--light-bg-color);
 		margin-bottom: 20px;
-		text-align: justify;
+		text-align: center;
+        width: 50%; /* Sets the width to 50% of the page */
+        margin: 0 auto; /* Centers the element horizontally */
 	}
 
 	/* Emphasis on Strong Text */
 	#main-wrapper strong {
 		color: var(--light-bg-color);
 		font-weight: bold;
-	}
-
-	/* Add a small text effect to emoji in the last paragraph */
-	#main-wrapper p:last-of-type {
-		font-size: 1.2rem;
-		font-style: italic;
-		text-align: center;
 	}
 
     #gallery-wrapper {
