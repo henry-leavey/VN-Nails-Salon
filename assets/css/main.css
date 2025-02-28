@@ -475,8 +475,8 @@ input, select, textarea {
     }
 
     #gallery-wrapper {
-		background-color: white;
-		color: black;
+		background-color: var(--light-bg-color);
+		color: var(--primary-color-dark);
 		text-align: center;
 		padding-top: 30px;
 		padding-bottom: 50px;
@@ -486,7 +486,7 @@ input, select, textarea {
 	#gallery-wrapper h2 {
 		font-size: 2.5rem;
 		font-weight: bold;
-		color: black;
+		color: var(--primary-color-dark);
 	}
 
 	/* Paragraph Styles */
@@ -506,7 +506,7 @@ input, select, textarea {
         justify-items: center; /* Centers items horizontally within each grid cell */
         position: relative;
         z-index: 1;
-        background-color: var(--lightest-color);
+        background-color: var(--primary-color);
         border-radius: 10px;
     }
 
@@ -944,10 +944,11 @@ body, input, select, textarea {
 }
 
 .footer-column p {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin: 5px 0;
     cursor: pointer;
     transition: color 0.3s ease-in-out;
+    text-align: justify;
 }
 
 .footer-column a {
