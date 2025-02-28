@@ -440,8 +440,8 @@ input, select, textarea {
 		padding: 40px 20px;
 		width: 100%;
 		margin: 0 auto;
-		border-radius: 10px;
 		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
 	}
 
 	/* Heading Styles */
@@ -469,6 +469,10 @@ input, select, textarea {
 		color: var(--light-bg-color);
 		font-weight: bold;
 	}
+
+    #main-wrapper button {
+        font-size: 1.5rem;
+    }
 
     #gallery-wrapper {
 		background-color: white;
@@ -932,7 +936,7 @@ body, input, select, textarea {
 }
 
 .footer-column h3 {
-    font-size: 21px;
+    font-size: 1.5rem;
     margin-bottom: 15px;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -940,7 +944,7 @@ body, input, select, textarea {
 }
 
 .footer-column p {
-    font-size: 14px;
+    font-size: 1.2rem;
     margin: 5px 0;
     cursor: pointer;
     transition: color 0.3s ease-in-out;
@@ -948,6 +952,7 @@ body, input, select, textarea {
 
 .footer-column a {
     color: inherit;
+    font-size: 1.5rem;
 }
 
 .footer-column a:hover {
