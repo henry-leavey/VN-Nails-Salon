@@ -880,6 +880,11 @@ body, input, select, textarea {
     font-size: 24px;
     letter-spacing: 2px;
     margin-bottom: 20px;
+    color: black !important;
+}
+
+.faq h3 {
+    color: black !important;
 }
 
 .faq details {
@@ -936,7 +941,7 @@ body, input, select, textarea {
 }
 
 .footer-column h3 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin-bottom: 15px;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -944,16 +949,15 @@ body, input, select, textarea {
 }
 
 .footer-column p {
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     margin: 5px 0;
     cursor: pointer;
     transition: color 0.3s ease-in-out;
-    text-align: justify;
 }
 
 .footer-column a {
     color: inherit;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
 }
 
 .footer-column a:hover {
