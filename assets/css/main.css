@@ -1003,6 +1003,7 @@ body, input, select, textarea {
 .footer-column {
     flex: 1;
     min-width: 180px;
+    white-space: nowrap;
 }
 
 .footer-column h3 {
@@ -1190,6 +1191,11 @@ body, input, select, textarea {
     body, input, select, textarea {
         font-size: 12pt;
     }
+
+    .text-container h2 {
+        font-size: 18pt !important;
+        white-space: nowrap;
+    }
 }
 
 /* Large Screens (≤1280px) */
@@ -1205,6 +1211,12 @@ body, input, select, textarea {
     .gallery img {
         width: 200px;
         height: 200px;
+    }
+
+    .footer-column p {
+        font-size: 9pt !important;
+        line-height: 2;
+        font-weight: bolder;
     }
 }
 
@@ -1410,6 +1422,12 @@ body, input, select, textarea {
         flex: 1 1 45%;
     }
 
+    .footer-column p {
+        font-size: 12pt !important;
+        line-height: 2;
+        font-weight: bolder;
+    }
+
     /* Section & Article */
     section, article {
         clear: both;
@@ -1608,6 +1626,10 @@ body, input, select, textarea {
 @media (max-width: 600px) {
     .gallery {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-column p {
+        font-size: 10pt !important;
     }
 }
 
