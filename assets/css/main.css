@@ -1193,8 +1193,14 @@ body, input, select, textarea {
     }
 
     .text-container h2 {
-        font-size: 18pt !important;
+        font-size: 20pt !important;
         white-space: nowrap;
+    }
+
+    .footer-column p {
+        font-size: 10pt !important;
+        line-height: 2;
+        font-weight: bolder;
     }
 }
 
@@ -1214,9 +1220,14 @@ body, input, select, textarea {
     }
 
     .footer-column p {
-        font-size: 9pt !important;
+        font-size: 8pt !important;
         line-height: 2;
         font-weight: bolder;
+    }
+
+    .text-container h2 {
+        font-size: 16pt !important;
+        white-space: nowrap;
     }
 }
 
