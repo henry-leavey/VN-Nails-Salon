@@ -55,12 +55,14 @@
 				</div>
 			</div>
 			
-			<!-- Modal Structure -->
 			<div id="imageModal" class="modal">
 				<span class="close" onclick="closeModal()">&times;</span>
-				<img class="modal-content" id="modalImage">
-				<div id="modalCaption" class="caption"></div>
 				
+				<div class="modal-inner"> <!-- New wrapper -->
+					<img class="modal-content" id="modalImage">
+					<div id="modalCaption" class="caption"></div>
+				</div>
+
 				<!-- Navigation Arrows -->
 				<button class="prev" onclick="changeImage(-1)">&#10094;</button>
 				<button class="next" onclick="changeImage(1)">&#10095;</button>
