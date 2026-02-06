@@ -10,10 +10,19 @@
 		<link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 	</head>
 	<body>
-		<div id="page-wrapper">
 
+		<div id="page-wrapper">
+			
 			<!-- Header (Dynamically Loaded) -->
 			<div id="header"></div>
+			
+			<div id="image-wrapper">
+				<img id="banner-image" src="images/nailsbanner3.png" alt="Nails Offer">
+			</div>
+
+      	</div>
+
+		<div id="page-wrapper">
 
 			<div id="gallery-wrapper">
 				<h2>Acrylic</h2>
@@ -46,12 +55,14 @@
 				</div>
 			</div>
 			
-			<!-- Modal Structure -->
 			<div id="imageModal" class="modal">
 				<span class="close" onclick="closeModal()">&times;</span>
-				<img class="modal-content" id="modalImage">
-				<div id="modalCaption" class="caption"></div>
 				
+				<div class="modal-inner"> <!-- New wrapper -->
+					<img class="modal-content" id="modalImage">
+					<div id="modalCaption" class="caption"></div>
+				</div>
+
 				<!-- Navigation Arrows -->
 				<button class="prev" onclick="changeImage(-1)">&#10094;</button>
 				<button class="next" onclick="changeImage(1)">&#10095;</button>
@@ -66,6 +77,5 @@
     	<script src="assets/js/henry.js"></script>
     	<script src="assets/js/galleryinteract.js"></script>
     	<script src="assets/js/sidemenu.js"></script>
-
 	</body>
 </html>
